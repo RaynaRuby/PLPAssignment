@@ -31,7 +31,7 @@ function App() {
             <button type="submit" className={styles['search-button']}>Search</button> {/* Apply button class */}
           </form>
           <div className={styles.footer}> {/* Apply footer class */}
-            <Link href="/Login">
+            <Link href="/sign-in">
                 <button className={styles['footer-button']}>Go to Login</button>
             </Link>
           </div>
