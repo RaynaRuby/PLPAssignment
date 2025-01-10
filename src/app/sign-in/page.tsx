@@ -4,10 +4,10 @@ import { useState } from "react";
 
 import styles from "./signin.module.css"; 
 
-const AdminPage = () => {
-    const adminCredentials = {
-        username: "admin",
-        password: "admin",
+const LoginPage = () => {
+    const studentCredentials = {
+        username: "10255555W",
+        password: "student",
     };
 
     const [username, setUsername] = useState("");
@@ -17,7 +17,7 @@ const AdminPage = () => {
 
     const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        if (username === adminCredentials.username && password === adminCredentials.password) {
+        if (username === studentCredentials.username && password === studentCredentials.password) {
             setIsAuthenticated(true);
             setErrorMessage("");
         } else {
@@ -58,4 +58,4 @@ if (isAuthenticated) {
     );
 };
 
-export default AdminPage;
+export default LoginPage;
