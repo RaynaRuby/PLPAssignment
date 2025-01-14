@@ -26,7 +26,7 @@ const EventPage = () => {
       <div className="my-6">
         <div className="my-4">
           <Image 
-            src="/public/event1.jpg" 
+            src="/cloud.png" 
             alt="Event Image" 
             width={600} 
             height={400} 
@@ -36,8 +36,8 @@ const EventPage = () => {
 
         <h2 className="text-xl font-semibold">About the Event</h2>
         <p className="text-sm mt-2">
-          This is the body text for Event 2. You can customize it to provide more
-          details about the event, such as its purpose, speakers, or agenda.
+          Dive into the latest advancements in cloud technology with Oracle experts. 
+          Learn how cloud solutions can drive innovation, efficiency, and growth in your organization.
         </p>        
       </div>
     </div>

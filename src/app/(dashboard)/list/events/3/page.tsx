@@ -26,7 +26,7 @@ const EventPage = () => {
       <div className="my-6">
         <div className="my-4">
           <Image 
-            src="/public/event1.jpg" 
+            src="/career.png" 
             alt="Event Image" 
             width={600} 
             height={400} 
@@ -36,8 +36,8 @@ const EventPage = () => {
 
         <h2 className="text-xl font-semibold">About the Event</h2>
         <p className="text-sm mt-2">
-          This is the body text for Event 2. You can customize it to provide more
-          details about the event, such as its purpose, speakers, or agenda.
+        Connect with industry leaders, explore career opportunities, and gain valuable insights into various 
+        professions. This is your chance to make meaningful connections and chart your career path.
         </p>        
       </div>
     </div>

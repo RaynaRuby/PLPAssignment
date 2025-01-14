@@ -26,7 +26,7 @@ const EventPage = () => {
       <div className="my-6">
         <div className="my-4">
           <Image 
-            src="/public/event1.jpg" 
+            src="/walk.png" 
             alt="Event Image" 
             width={600} 
             height={400} 
@@ -36,8 +36,8 @@ const EventPage = () => {
 
         <h2 className="text-xl font-semibold">About the Event</h2>
         <p className="text-sm mt-2">
-          This is the body text for Event 2. You can customize it to provide more
-          details about the event, such as its purpose, speakers, or agenda.
+        Join a meaningful cause by participating in this community walkathon. 
+        Every step you take helps support families in need by contributing rice to the underprivileged.
         </p>        
       </div>
     </div>
