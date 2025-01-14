@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const EventPage = () => {
-  const event = eventsData[1]; // Assuming the second event in the data array is for this page
+  const event = eventsData[8]; // Assuming the second event in the data array is for this page
 
   return (
     <div className="bg-white p-4 rounded-md flex-1 m-4 mt-0">

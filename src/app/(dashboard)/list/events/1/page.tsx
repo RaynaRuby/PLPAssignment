@@ -23,7 +23,6 @@ const EventPage = () => {
       <p><strong>Start Time:</strong> {event.startTime}</p>
       <p><strong>End Time:</strong> {event.endTime}</p>
 
-      // Customizable Body Content
       <div className="my-6">
         <div className="my-4">
           <Image 
