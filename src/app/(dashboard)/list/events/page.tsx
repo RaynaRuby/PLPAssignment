@@ -1,4 +1,3 @@
-import FormModal from "@/components/FormModal";
 import Pagination from "@/components/Pagination";
 import Table from "@/components/Table";
 import TableSearch from "@/components/TableSearch";
@@ -43,19 +42,15 @@ const columns = [
 
 const EventListPage = () => {
   const renderRow = (item: Event) => (
-    <tr
-      key={item.id}
-      className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight"
-    >
+    <tr key={item.id} className="border-b border-gray-200 even:bg-slate-50 text-sm hover:bg-lamaPurpleLight">
       <Link href={`/list/events/${item.id}`} passHref>
-      <td className="flex items-center gap-4 p-4 cursor-pointer">{item.title}</td>
-    </Link>
+        <td className="flex items-center gap-4 p-4 cursor-pointer">{item.title}</td>
+      </Link>
       <td>{item.venue}</td>
       <td className="hidden md:table-cell">{item.date}</td>
       <td className="hidden md:table-cell">{item.startTime}</td>
       <td className="hidden md:table-cell">{item.endTime}</td>
     </tr>
-    // I cannot solve the hydration error cause the current time is before the show time so just ignore the error message
   );
 
   return (
