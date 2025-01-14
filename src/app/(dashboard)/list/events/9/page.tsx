@@ -38,7 +38,14 @@ const EventPage = () => {
         <p className="text-sm mt-2">
           Dive into the latest advancements in cloud technology with Oracle experts. 
           Learn how cloud solutions can drive innovation, efficiency, and growth in your organization.
-        </p>        
+        </p>
+        <div className="mt-6">
+          <Link href="https://forms.gle/khxJRtjC5VrDMrkS6" passHref>
+            <button className="bg-green-500 text-white py-2 px-4 rounded-md">
+              RSVP Here to Reserve a Spot!
+            </button>
+          </Link>
+        </div>             
       </div>
     </div>
   );

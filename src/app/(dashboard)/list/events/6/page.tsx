@@ -39,7 +39,14 @@ const EventPage = () => {
         Celebrate the vibrant community of Co-Curricular Activities (CCAs) 
         at NP! Discover diverse clubs, showcase your talents, and engage in exciting 
         performances, workshops, and hands-on experiences.
-        </p>        
+        </p>
+        <div className="mt-6">
+          <Link href="https://forms.gle/khxJRtjC5VrDMrkS6" passHref>
+            <button className="bg-green-500 text-white py-2 px-4 rounded-md">
+              RSVP Here to Reserve a Spot!
+            </button>
+          </Link>
+        </div>             
       </div>
     </div>
   );

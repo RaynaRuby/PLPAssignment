@@ -39,7 +39,14 @@ const EventPage = () => {
           Discover the transformative impact of AI on the workforce in this engaging talk. 
           Gain insights into emerging trends, essential skills, and how to future-proof your career in a rapidly 
           evolving job market.
-        </p>        
+        </p>
+        <div className="mt-6">
+          <Link href="https://forms.gle/khxJRtjC5VrDMrkS6" passHref>
+            <button className="bg-green-500 text-white py-2 px-4 rounded-md">
+              RSVP Here to Reserve a Spot!
+            </button>
+          </Link>
+        </div>        
       </div>
     </div>
   );
