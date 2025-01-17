@@ -17,14 +17,26 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-start bg-gradient-to-r from-teal-400 to-blue-500">
-      <div className="text-center mt-[-50px]"> {/* Adjust margin to move logo higher */}
-        {/* Logo above the search bar */}
-        <Image src="/logo.png" alt="Logo" width={500} height={500} className="mx-auto" />
+    <div className="min-h-screen flex flex-col items-center justify-start relative">
+      {/* Background Image without overlay */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/background.png" 
+          alt="Background Image" 
+          layout="fill" 
+          objectFit="cover"  // Ensures the image fills the container while preserving aspect ratio
+          className="object-cover"
+        />
       </div>
+
+      <div className="relative z-10 text-center mt-12"> {/* Added margin-top to add padding above the logo */}
+        {/* Logo above the search bar */}
+        <Image src="/logo.png" alt="Logo" width={350} height={100} className="mx-auto" />
+      </div>
+
     
       {/* Search Form */}
-      <form className="w-[500px] relative"> {/* Add margin to ensure space between logo and search bar */}
+      <form className="w-[500px] relative mt-8"> {/* Added margin-top for spacing */}
         <div className="relative mb-8">
           <input
             type="search"

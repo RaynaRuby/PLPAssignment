@@ -8,7 +8,7 @@ const menuItems = [
       {
         icon: "/home.png",
         label: "Home",
-        href: "/",
+        href: "/student",
       },
       {
         icon: "/teacher.png",
@@ -68,7 +68,7 @@ const menuItems = [
       {
         icon: "/logout.png",
         label: "Logout",
-        href: "/logout",
+        href: "/sign-in",
       },
     ],
   },
