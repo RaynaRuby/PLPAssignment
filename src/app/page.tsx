@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { words } from '../lib/data1';
 import Image from 'next/image';
+import Button from '@/components/Button'; // Import your Button component
 
 function App() {
   const [activeSearch, setActiveSearch] = useState<string[]>([]);
@@ -14,6 +15,11 @@ function App() {
       return false;
     }
     setActiveSearch(words.filter((w: string) => w.toLowerCase().includes(e.target.value.toLowerCase())).slice(0, 8));
+  };
+
+  // Handle Button Click - Redirect to /sign-in
+  const handleButtonClick = () => {
+    window.location.href = '/sign-in'; // Redirect to the /sign-in page
   };
 
   return (
@@ -29,11 +35,16 @@ function App() {
         />
       </div>
 
+      {/* Button positioned at the top-right of the screen */}
+      <div className="absolute top-4 right-4 z-10">
+        {/* Pass handleButtonClick to the Button component */}
+        <Button onClick={handleButtonClick} /> 
+      </div>
+
       <div className="relative z-10 text-center mt-12"> {/* Added margin-top to add padding above the logo */}
         {/* Logo above the search bar */}
         <Image src="/logo.png" alt="Logo" width={350} height={100} className="mx-auto" />
       </div>
-
     
       {/* Search Form */}
       <form className="w-[500px] relative mt-8"> {/* Added margin-top for spacing */}
