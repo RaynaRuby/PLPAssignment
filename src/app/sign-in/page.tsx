@@ -4,7 +4,7 @@ import { useState } from "react";
 import styles from "./signin.module.css"; // Import the CSS module
 
 export default function Login() {
-  const [email, setEmail] = useState("");
+  const [userID, setUserID] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
@@ -12,19 +12,33 @@ export default function Login() {
     e.preventDefault();
 
     // Fixed credentials for demo
-    const demoEmail = "student@example.com";
+    const demoUserID = "S1023456A";
     const demoPassword = "password123";
 
     // Check if the entered email and password match the demo credentials
-    if (email === demoEmail && password === demoPassword) {
-      window.location.href = "/dashboard"; // Redirect using window.location
+    if (userID === demoUserID && password === demoPassword) {
+      window.location.href = "/student"; // Redirect using window.location
     } else {
-      setError("Invalid email or password.");
+      setError("Invalid user ID or password.");
     }
   };
 
   return (
     <div className={styles.loginContainer}>
+      {/* Background Video */}
+      <div className={styles.videoWrapper}>
+        <video
+          className={styles.backgroundVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/Untitled design.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
       <div className={styles.formContainer}>
         <div className={styles.formWrapper}>
           <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Student Portal Login</h1>
@@ -33,13 +47,13 @@ export default function Login() {
 
           <form onSubmit={handleSubmit} className="w-full max-w-md mx-auto">
             <div className="mb-4">
-              <label htmlFor="email" className="block text-gray-700 font-semibold">Email</label>
+              <label htmlFor="userID" className="block text-gray-700 font-semibold">User ID</label>
               <input
-                type="email"
-                id="email"
+                type="userID"
+                id="userID"
                 className="w-full p-3 border border-gray-300 rounded-md mt-2 focus:ring-2 focus:ring-blue-500"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={userID}
+                onChange={(e) => setUserID(e.target.value)}
               />
             </div>
 

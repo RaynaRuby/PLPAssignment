@@ -11,21 +11,21 @@ type Value = Date | [Date, Date];
 const events = [
     {
         id: 1,
-        title: 'Event 1',
+        title: 'Common Test',
         time: '10:00 AM - 12:00 PM',
-        description: 'Description of event 1',
+        description: 'Machine Learning Common Test', 
     },
     {
         id: 2,
-        title: 'Event 2',
+        title: 'DL Presentation',
         time: '12:00 PM - 14:00 PM',
-        description: 'Description of event 2',
+        description: 'Deep Learning Assignment Presentation',
     },
     {
         id: 3,
-        title: 'Event 3',
-        time: '14:00 AM - 16:00 PM',
-        description: 'Description of event 3',
+        title: 'Networking Event',
+        time: '14:00 PM - 16:00 PM',
+        description: 'Networking event with industry professionals',
     },
 ];
 

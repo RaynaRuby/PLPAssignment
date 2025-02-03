@@ -27,8 +27,12 @@ const BigCalendar = () => {
       onView={handleOnChangeView}
       min={new Date(2025, 1, 0, 8, 0, 0)}
       max={new Date(2025, 1, 0, 18, 0, 0)}
+      formats={{
+        dayFormat: "ddd", // Set to display the abbreviated day name (Mon, Tue, etc.)
+      }}
     />
   );
 };
 
 export default BigCalendar;
+

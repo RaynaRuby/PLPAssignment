@@ -22,6 +22,11 @@ function App() {
     window.location.href = '/sign-in'; // Redirect to the /sign-in page
   };
 
+  // Handle Search Result Click - Open external page in a new tab
+  const handleSearchResultClick = () => {
+    window.open('https://www.moe.gov.sg/calendar/', '_blank'); // Open the external page in a new tab
+  };
+
   return (
     <div className="min-h-screen flex flex-col items-center justify-start relative">
       {/* Background Image without overlay */}
@@ -52,7 +57,7 @@ function App() {
           <input
             type="search"
             placeholder="What are you looking for?"
-            className="w-full p-4 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50"
+            className="w-full p-4 rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-semibold focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50"
             onChange={(e) => handleSearch(e)}
           />
           <button className="absolute right-2 top-1/2 -translate-y-1/2 p-4 bg-indigo-600 text-white rounded-full shadow-lg transform hover:scale-110 transition-all duration-200" title="Search">
@@ -63,7 +68,11 @@ function App() {
         {activeSearch.length > 0 && (
           <div className="absolute top-20 p-4 bg-white text-black w-full rounded-xl left-1/2 -translate-x-1/2 flex flex-col gap-2 shadow-lg max-h-[200px] overflow-y-auto">
             {activeSearch.map((s, index) => (
-              <span key={index} className="p-2 rounded-md hover:bg-purple-200 transition-all cursor-pointer">
+              <span 
+                key={index} 
+                className="p-2 rounded-md hover:bg-purple-200 transition-all cursor-pointer"
+                onClick={handleSearchResultClick} // Add onClick handler for redirection
+              >
                 {s}
               </span>
             ))}

@@ -49,7 +49,7 @@
 }
 
 .rbc-time-header {
-  display: none !important;
+  margin-bottom: -40px;
 }
 
 .rbc-time-content {
